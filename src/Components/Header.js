@@ -4,7 +4,7 @@ class Header extends Component {
  
     render() { 
         return ( 
-            <div className='header'> Olatz</div>
+            <div className='header'> Olatz header</div>
          );
     }
 }

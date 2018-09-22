@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import Main from './Main';
 import Curriculum from './Curriculum';
@@ -7,15 +8,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Main />
-        <Curriculum />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+       <Switch>
+          <Route
+            exact path='/'
+            render={() => <Main />
+            } />
+          <Route
+            path='/cv' 
+            render={(p) => <Curriculum />
+              }
+          />
+        </Switch>
+        
       </div>
     );
   }
