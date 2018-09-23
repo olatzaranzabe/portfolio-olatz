@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer';
 
 class Main extends Component {
-
+    constructor(props) {
+        super(props)
+        const description = ['Olatz', 'Front-end developer', 'Economic analyst']
+    }
     render() {
         return (
             <div>
-                <Header />
-                <Footer />
+                <h1 className='main-description'>I'm Olatz</h1>
+                <p>Página de inicio</p>
             </div>
         );
     }
